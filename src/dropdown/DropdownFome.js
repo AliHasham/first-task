@@ -1,9 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link,useNavigate} from 'react-router-dom'
 // import LoginScreen from '../screen/LoginScreen'
 
 const DropdownFome = () => {
-
+  const navigate = useNavigate();
+const deletData =()=>{
+ 
+  localStorage.removeItem('user')
+  navigate ("/");
+}
   return (
     <div>
         <form className='logout-fome' >
@@ -16,7 +21,7 @@ const DropdownFome = () => {
     </div>
     <div className='fome-button'>
     <button type="submit" className="btn btn-secondary btn-user">User Setting</button>
-    <Link to='/'><button  type="submit" className="btn btn-danger btn-logout" >  Log Out</button></Link>
+   <button onClick={()=>deletData()}  type="submit" className="btn btn-danger btn-logout" >  Log Out</button>
 
     </div>
   </form>

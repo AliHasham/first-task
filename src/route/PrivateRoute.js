@@ -21,7 +21,7 @@ const PrivateRoute=()=>{
 //  let isLoggedIn;
 const isLoggedd=()=>{
 
-    if(!JSON.parse(localStorage.getItem('auth_token'))){
+    if(!JSON.parse(localStorage.getItem('data'))){
        return(true);   
     }else{
        return(false);
@@ -32,6 +32,6 @@ const isLoggedd=()=>{
  const [isLogged, setIsLogged] = useState(isLoggedd)
 
     
-    return  setIsLogged? <Outlet/>:<Navigate to='/' /> ;
+    return ( setIsLogged? <Navigate to='/home' />:<Outlet/> )
 }
 export default PrivateRoute;

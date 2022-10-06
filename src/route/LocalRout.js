@@ -1,9 +1,9 @@
 
 import { Navigate, Outlet } from "react-router-dom";
 import { useState } from "react";
-const PrivateRoute=()=>{
+const LocalRout=()=>{
 const isLoggedd=()=>{
-    if(!JSON.parse(localStorage.getItem('user_login'))){
+    if(!JSON.parse(localStorage.getItem('user'))){
        return(false);   
     }else{
        return(true);
@@ -14,6 +14,6 @@ const isLoggedd=()=>{
  const [isLogged, setIsLogged] = useState(isLoggedd)
 
     
-    return isLogged? <Outlet/>:<Navigate to='/home' /> ;
+    return setIsLogged? <Outlet/>:<Navigate to='/' />;
 }
-export default PrivateRoute;
+export default LocalRout;

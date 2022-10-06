@@ -22,7 +22,7 @@ const LoginInput = () => {
   // }
   // return true;}
   const GotoHome = () => {
-    const [user, setUser] = useState();
+
 
 setLoading(true)
     var axios = require('axios');
@@ -58,17 +58,8 @@ setLoading(true)
         setLoading(false)
 
       })
-      .catch(function (error) {
-        console.log(error);
-         setLoading(false)
-        alert('give correct data')
-       
-      });
-      const deleteData = () => {
-        window.localStorage.removeItem('user');
-        setUser(null);
-      };
-
+     
+     
     //  navigate ("/home");
   }
   // vaildata=()=>{
