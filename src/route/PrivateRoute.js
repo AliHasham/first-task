@@ -22,9 +22,9 @@ const PrivateRoute=()=>{
 const isLoggedd=()=>{
 
     if(!JSON.parse(localStorage.getItem('data'))){
-       return(true);   
+       return(false);   
     }else{
-       return(false);
+       return(true);
       
     }
     
@@ -32,6 +32,6 @@ const isLoggedd=()=>{
  const [isLogged, setIsLogged] = useState(isLoggedd)
 
     
-    return ( setIsLogged? <Navigate to='/home' />:<Outlet/> )
+    return ( setIsLogged? <Navigate to='/' />:<Outlet/> )
 }
 export default PrivateRoute;

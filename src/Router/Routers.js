@@ -9,14 +9,15 @@ import LoginScreen from '../screen/LoginScreen'
 const Routers = () => {
   return (
    <Routes>
+    <Route element={<LocalRout/>} >
+    <Route path='/' element={<LoginScreen/>}/>
+   </Route>
      <Route path='/home' element={<HomeScreen/>} />
   
   <Route  element={<PrivateRoute/>} > 
  
        </Route>
-    <Route element={<LocalRout/>} >
-    <Route path='/' element={<LoginScreen/>}/>
-   </Route>
+   
       
 
     

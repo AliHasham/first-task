@@ -3,7 +3,7 @@ import { Navigate, Outlet } from "react-router-dom";
 import { useState } from "react";
 const LocalRout=()=>{
 const isLoggedd=()=>{
-    if(!JSON.parse(localStorage.getItem('user'))){
+    if(!JSON.parse(localStorage.setItem('user'))){
        return(false);   
     }else{
        return(true);
